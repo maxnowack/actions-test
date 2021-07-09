@@ -8,4 +8,4 @@ jobs:
     steps:
       - uses: maxnowack/action-release-generator@main
         with:
-          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          token: "${{ secrets.GITHUB_TOKEN }}"
