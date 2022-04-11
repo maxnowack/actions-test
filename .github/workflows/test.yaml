@@ -1,4 +1,4 @@
-name: Build docker
+name: Test
 
 on:
   pull_request:
@@ -17,7 +17,10 @@ jobs:
       - name: check review app
         id: reviewapp
         run: |
-          echo $GIT_REF
+          echo "GIT_REF: $GIT_REF"
+          echo "GIT_REF_NAME: $GIT_REF_NAME"
+          echo "GIT_HEAD_REF: $GIT_HEAD_REF"
+          echo "GIT_BASE_REF: $GIT_BASE_REF"
         env:
           GIT_REF: ${{ github.ref }}
           GIT_REF_NAME: ${{ github.ref_name }}
